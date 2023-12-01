@@ -1,0 +1,8 @@
+.root {
+	background: #ebebeb;
+	display: flex;
+	flex-direction: column;
+	padding: 10px;
+	border-radius: 10px;
+	gap: 15px;
+}

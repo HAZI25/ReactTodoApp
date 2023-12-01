@@ -1,0 +1,14 @@
+.root {
+	border: none;
+	border-radius: 5px;
+	padding: 5px 10px;
+}
+
+.primary {
+	background-color: #fff;
+	border: 1px solid #ccc;
+}
+
+.secondary {
+	background-color: #cecece;
+}

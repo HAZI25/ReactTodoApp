@@ -1,0 +1,47 @@
+.root {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background-color: #fff;
+	border-radius: 5px;
+	padding: 10px 15px;
+}
+
+.checkbox {
+	width: 30px;
+	height: 30px;
+}
+
+.details,
+.actions {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.texts {
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+}
+
+.title {
+	font-weight: 700;
+	font-size: 22px;
+	color: #303030;
+}
+
+.title--completed {
+	text-decoration: line-through;
+	color: #606060;
+}
+
+.date {
+	color: #606060;
+}
+
+.delete,
+.edit {
+	font-size: 30px;
+	cursor: pointer;
+}

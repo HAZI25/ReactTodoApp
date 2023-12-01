@@ -1,0 +1,17 @@
+.root {
+	padding: 5px 10px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	border-radius: 5px;
+}
+
+.primary {
+	background-color: rgb(84, 113, 255);
+	color: #fff;
+}
+
+.secondary {
+	background-color: #cecece;
+}
