@@ -6,4 +6,5 @@ Simple todo Application with CRUD operations and the ability to filter by comple
 ## Used Technologies:
 * React
 * Redux-toolkit
-* TypeScript 
+* TypeScript
+* Jest + react-testing-library
