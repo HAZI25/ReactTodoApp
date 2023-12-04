@@ -21,28 +21,31 @@ const TodoItem = ({ todo }: TodoItemProps) => {
 			<div className={styles.root}>
 				<div className={styles.details}>
 					<input
+						data-testid="checkbox-elem"
 						className={styles.checkbox}
 						type="checkbox"
 						checked={todo.status === COMPLETE}
 						onChange={() => dispatch(toggleComplete(todo.id))}
 					/>
 					<div className={styles.texts}>
-						<p
+						<p data-testid="title-elem"
 							className={`${styles.title} ${
 								todo.status === COMPLETE ? styles['title--completed'] : ''
 							}`}
 						>
 							{todo.title}
 						</p>
-						<p className={styles.date}>{todo.date}</p>
+						<p data-testid="date-elem" className={styles.date}>{todo.date}</p>
 					</div>
 				</div>
 				<div className={styles.actions}>
 					<MdOutlineEdit
+						data-testid="edit-elem"
 						className={styles.edit}
 						onClick={() => setModalOpen(true)}
 					/>
 					<TiDeleteOutline
+						data-testid="delete-elem"
 						className={styles.delete}
 						onClick={() => {
 							dispatch(deleteTodo(todo.id));

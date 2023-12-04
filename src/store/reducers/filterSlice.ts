@@ -1,9 +1,5 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { IStatus } from '../../pages/TodosPage/models';
-
-interface IFilter {
-	status: IStatus;
-}
+import { IFilter, IStatus } from '../../pages/TodosPage/models';
 
 const initialState: IFilter = {
 	status: 'all',

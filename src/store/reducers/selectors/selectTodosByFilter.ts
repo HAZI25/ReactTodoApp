@@ -1,10 +1,10 @@
 import { createSelector } from '@reduxjs/toolkit';
 import { selectTodos } from './selectTodos';
-import { selectFilters } from './selectFilters';
+import { selectFilter } from './selectFilter';
 import { ALL } from '../../../constants';
 
 export const selectTodosByFilter = createSelector(
-	[selectTodos, selectFilters],
+	[selectTodos, selectFilter],
 	(todos, filter) => {
 		return filter.status === ALL
 			? todos

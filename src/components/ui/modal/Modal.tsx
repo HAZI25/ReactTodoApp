@@ -6,9 +6,9 @@ interface ModalProps {
 	setVisibility: (visibility: boolean) => void;
 }
 
-const Modal = ({ children, setVisibility }: ModalProps) => {
+const Modal = ({ children, setVisibility, ...props }: ModalProps) => {
 	return (
-		<div className={styles.root} onClick={() => setVisibility(false)}>
+		<div className={styles.root} onClick={() => setVisibility(false)} {...props}>
 			<div className={styles.modal} onClick={(e) => e.stopPropagation()}>
 				{children}
 			</div>

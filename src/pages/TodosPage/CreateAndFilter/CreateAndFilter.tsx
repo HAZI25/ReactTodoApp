@@ -14,20 +14,27 @@ const CreateAndFilter = () => {
 	const dispatch = useAppDispatch();
 
 	return (
-		<div className={styles.root}>
-			<Button onClick={() => setModalOpen(true)}>Add todo</Button>
-			<Select
-				variant="secondary"
-				onChange={(e) => dispatch(changeFilter(e.target.value as IStatus))}
-			>
-				<option value={ALL}>ALL</option>
-				<option value={COMPLETE}>Completed</option>
-				<option value={INCOMPLETE}>Incompleted</option>
-			</Select>
-			{modalOpen && (
-				<AddUpdateTodoModal variant="add" setVisibility={setModalOpen} />
-			)}
-		</div>
+		<section className={styles.root}>
+			<div className="container">
+				<div className={styles.column}>
+					<Button data-testid="add-elem" onClick={() => setModalOpen(true)}>
+						Add todo
+					</Button>
+					<Select
+						data-testid="select-elem"
+						variant="secondary"
+						onChange={(e) => dispatch(changeFilter(e.target.value as IStatus))}
+					>
+						<option value={ALL}>ALL</option>
+						<option value={COMPLETE}>Completed</option>
+						<option value={INCOMPLETE}>Incompleted</option>
+					</Select>
+					{modalOpen && (
+						<AddUpdateTodoModal variant="add" setVisibility={setModalOpen} />
+					)}
+				</div>
+			</div>
+		</section>
 	);
 };
 
